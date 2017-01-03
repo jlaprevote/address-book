@@ -1,16 +1,20 @@
 <h1>Contacts</h1>
 
-<p>Sort by:
-  <%= link_to "Last Name A-Z", contacts_path(order: "l_name_asc") %>
-  <%= link_to "First Name A-Z", contacts_path(order: "f_name_asc") %>
-  <%= link_to "Last Name Z-A", contacts_path(order: "l_name_des") %>
-  <%= link_to "First Name Z-A", contacts_path(order: "f_name_des") %>
-</p>
+<div class="dropdown">
+  <button class="dropbtn">Sort by</button>
+  <div class="dropdown-content">
+    <a><%= link_to "A-Z Last Name", contacts_path(order: "l_name_asc") %></a>
+    <a><%= link_to "A-Z First Name", contacts_path(order: "f_name_asc") %></a>
+    <a><%= link_to "Z-A Last Name", contacts_path(order: "l_name_des") %></a>
+    <a><%= link_to "Z-A First Name", contacts_path(order: "f_name_des") %></a>
+  </div>
+</div>
 
 <ul>
   <% @contacts.each do |c| %>
-  <%= link_to c.f_name, contact_path(c) %>
-  <%= link_to c.l_name, contact_path(c) %><br>
+  <a><%= link_to c.f_name, contact_path(c) %>
+  <%= link_to c.l_name, contact_path(c) %></a><br>
   <% end %>
+</ul>
 
-  <br><%= link_to "Create a New Contact", new_contact_path %>
+  <br><a><%= link_to "Create a New Contact", new_contact_path %></a>
