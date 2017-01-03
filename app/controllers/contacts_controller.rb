@@ -5,6 +5,12 @@ class ContactsController < ApplicationController
     @contacts = Contact.all
   end
 
+  def alpha
+    @contacts = Contact.all.order(:l_name)
+
+    redirect_to contacts_path
+  end
+
   def show
     @contact = Contact.find(params[:id])
   end
@@ -18,6 +24,28 @@ class ContactsController < ApplicationController
     @contact.save
 
     redirect_to contacts_path
+  end
+
+  def destroy
+    @contact = Contact.find(params[:id])
+    @contact.destroy
+
+    flash.notice = "Contact Deleted!"
+
+    redirect_to contacts_path
+  end
+
+  def edit
+    @contact = Contact.find(params[:id])
+  end
+
+  def update
+    @contact = Contact.find(params[:id])
+    @contact.update(contact_params)
+
+    flash.notice = "Contact Updated"
+
+    redirect_to contact_path(@contact)
   end
 
 end

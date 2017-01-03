@@ -1,0 +1,30 @@
+<%= form_for(@contact) do |f| %>
+  <ul>
+    <% @contact.errors.full_messages.each do |err| %>
+      <li><%= err %></li>
+    <% end %>
+  </ul>
+  <p>
+    <%= f.label :f_name, 'First Name' %><br>
+    <%= f.text_field :f_name %>
+  </p>
+  <p>
+    <%= f.label :l_name, 'Last Name' %><br>
+    <%= f.text_field :l_name %>
+  </p>
+  <p>
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

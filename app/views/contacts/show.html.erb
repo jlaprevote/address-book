@@ -7,3 +7,5 @@
 <p><%= @contact.email %></p>
 
 <%= link_to "Back to Contact List", contacts_path %>
+<br><%= link_to "Delete Contact", contact_path(@contact), method: :delete, data: {confirm: "Really delete?"} %>
+<br><%= link_to "Edit Contact", edit_contact_path(@contact) %>

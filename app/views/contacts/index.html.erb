@@ -1,11 +1,11 @@
 <h1>Contacts</h1>
 
+<input type="button" onclick="window.location = '/alpha'">
+
 <ul>
   <% @contacts.each do |c| %>
-    Name:     <%= c.f_name %>
-              <%= c.l_name %><br>
-    Address:  <%= c.address %><br>
-    Phone:    <%= c.phone %><br>
-    Email:    <%= c.email %><br><br>
+  <%= link_to c.l_name, contact_path(c) %>,
+  <%= link_to c.f_name, contact_path(c) %><br>
   <% end %>
-  
+
+  <br><%= link_to "Create a New Contact", new_contact_path %>
