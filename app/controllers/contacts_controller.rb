@@ -2,15 +2,17 @@ class ContactsController < ApplicationController
   include ContactsHelper
 
   def index
-
-    if params[:order] == 'l_name'
+    if params[:order] == 'l_name_asc'
       @contacts = Contact.all.order('l_name')
-    elsif params[:order] = 'f_name'
+    elsif params[:order] == 'f_name_asc'
       @contacts = Contact.all.order('f_name')
+    elsif params[:order] == 'l_name_des'
+      @contacts = Contact.all.order('l_name DESC')
+    elsif params[:order] == 'f_name_des'
+      @contacts = Contact.all.order('f_name DESC')
     else
       @contacts = Contact.all
     end
-
   end
 
   def show
