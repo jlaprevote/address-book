@@ -2,13 +2,15 @@ class ContactsController < ApplicationController
   include ContactsHelper
 
   def index
-    @contacts = Contact.all
-  end
 
-  def alpha
-    @contacts = Contact.all.order(:l_name)
+    if params[:order] == 'l_name'
+      @contacts = Contact.all.order('l_name')
+    elsif params[:order] = 'f_name'
+      @contacts = Contact.all.order('f_name')
+    else
+      @contacts = Contact.all
+    end
 
-    redirect_to contacts_path
   end
 
   def show
