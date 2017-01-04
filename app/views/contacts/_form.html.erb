@@ -1,30 +1,33 @@
+<div class="form">
 <%= form_for(@contact) do |f| %>
   <ul>
     <% @contact.errors.full_messages.each do |err| %>
       <li><%= err %></li>
     <% end %>
   </ul>
+
   <p>
-    <%= f.label :f_name, 'First Name' %><br>
+    <%= f.label :f_name, 'First Name' %>
     <%= f.text_field :f_name %>
   </p>
   <p>
-    <%= f.label :l_name, 'Last Name' %><br>
+    <%= f.label :l_name, 'Last Name' %>
     <%= f.text_field :l_name %>
   </p>
   <p>
-    <%= f.label :address %><br>
+    <%= f.label :address %>
     <%= f.text_field :address %>
   </p>
   <p>
-    <%= f.label :phone %><br>
+    <%= f.label :phone %>
     <%= f.text_field :phone %>
   </p>
   <p>
-    <%= f.label :email %><br>
+    <%= f.label :email %>
     <%= f.text_field :email %>
   </p>
   <p>
-    <%= f.submit %>
+    <%= f.submit :class => "button" %>
   </p>
 <% end %>
+</div>

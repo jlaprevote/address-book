@@ -10,11 +10,11 @@
   </div>
 </div>
 
-<ul>
+<ul class="contact-list">
   <% @contacts.each do |c| %>
   <a><%= link_to c.f_name, contact_path(c) %>
   <%= link_to c.l_name, contact_path(c) %></a><br>
   <% end %>
 </ul>
 
-  <br><a><%= link_to "Create a New Contact", new_contact_path %></a>
+  <br><span class="link"><%= link_to "Create a New Contact", new_contact_path %></span>

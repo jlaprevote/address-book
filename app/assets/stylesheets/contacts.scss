@@ -13,14 +13,82 @@ h1 {
   text-transform: uppercase;
 }
 
-ul {
-  color: #111;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 28px;
-  margin: 0 0 48px;
+.flash {
+  color: red;
 }
 
+.contact-list {
+  color: #111;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contact-detail {
+  color: #111;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0 0 0;
+  text-align: center;
+}
+
+.link {
+  color: #111;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  text-align: left;
+}
+
+.form {
+  color: #111;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  line-height: 32px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+// http://stackoverflow.com/questions/39389588/align-label-and-text-field-in-a-same-line-rails
+label {
+    display: inline-block;
+    width: 100px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+// http://cssdeck.com/labs/purely-css
+.button {
+  display: inline-block;
+	color: #666;
+	background-color: #eee;
+  font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+	padding: 10px 30px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-bottom-width: 3px;
+}
+
+.button:hover {
+  background-color: #e3e3e3;
+  border-color: rgba(0,0,0,0.5);;
+}
+
+.button:active {
+  background-color: #CCC;
+  border-color: rgba(0,0,0,0.9);
+}
+
+// http://www.w3schools.com/howto/howto_css_dropdown.asp
 /* Dropdown */
 .dropbtn {
     background-color: #0C115B;
