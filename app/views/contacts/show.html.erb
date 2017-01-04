@@ -1,6 +1,11 @@
 <h1><%= @contact.l_name %></h1>
 
 <div class="contact-detail">
+<p>
+  <% if @contact.image.exists? %>
+    <%= image_tag @contact.image.url(:medium) %>
+  <% end %>
+</p>
 <p><%= @contact.f_name %>
 <%= @contact.l_name %></p>
 <p><%= @contact.address %></p>

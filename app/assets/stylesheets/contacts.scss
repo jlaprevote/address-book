@@ -13,8 +13,24 @@ h1 {
   text-transform: uppercase;
 }
 
-.flash {
-  color: red;
+.error {
+  color: #D95852;
+}
+
+.alert-success {
+  background-color: #89D77C;
+  color: #268018;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+  font-size: 32px;
+}
+
+.alert-fail {
+  background-color: #D95852;
+  color: #810C07;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+  font-size: 32px;
 }
 
 .contact-list {
@@ -48,14 +64,14 @@ h1 {
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 700;
   line-height: 32px;
-  width: 300px;
+  width: 400px;
   margin: 0 auto;
 }
 
 // http://stackoverflow.com/questions/39389588/align-label-and-text-field-in-a-same-line-rails
 label {
     display: inline-block;
-    width: 100px;
+    width: 125px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -64,7 +80,7 @@ label {
 // http://cssdeck.com/labs/purely-css
 .button {
   display: inline-block;
-	color: #666;
+	color: #111;
 	background-color: #eee;
   font-weight: 700;
 	text-transform: uppercase;
@@ -74,7 +90,7 @@ label {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	border: 1px solid rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,1);
 	border-bottom-width: 3px;
 }
 

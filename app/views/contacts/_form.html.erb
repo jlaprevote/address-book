@@ -1,11 +1,18 @@
 <div class="form">
-<%= form_for(@contact) do |f| %>
-  <ul>
+<%= form_for(@contact, html: {mulitpart: true}) do |f| %>
+  <ul class="error">
     <% @contact.errors.full_messages.each do |err| %>
-      <li><%= err %></li>
+      <%= err %><br>
     <% end %>
   </ul>
 
+  <p>
+    <% if @contact.image.exists? %>
+      <%= image_tag @contact.image.url(:small) %>
+    <% end %>
+    <%= f.label :image, "Attach a Photo" %>
+    <%= f.file_field :image %>
+  </p>
   <p>
     <%= f.label :f_name, 'First Name' %>
     <%= f.text_field :f_name %>
