@@ -6,7 +6,6 @@ class CreateContacts < ActiveRecord::Migration[5.0]
       t.string :address
       t.string :phone
       t.string :email
-# TODO add image? paperclip?
 
       t.timestamps
     end

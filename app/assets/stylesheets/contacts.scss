@@ -71,10 +71,7 @@ h1 {
 // http://stackoverflow.com/questions/39389588/align-label-and-text-field-in-a-same-line-rails
 label {
     display: inline-block;
-    width: 125px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    width: 120px;
 }
 
 // http://cssdeck.com/labs/purely-css

@@ -1,5 +1,6 @@
 <div class="form">
 <%= form_for(@contact, html: {mulitpart: true}) do |f| %>
+
   <ul class="error">
     <% @contact.errors.full_messages.each do |err| %>
       <%= err %><br>
